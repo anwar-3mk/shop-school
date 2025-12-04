@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>متجر النخبة للإلكترونيات</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <a href="#welcome" class="logo">Elite Tech</a>
+        <div class="nav-actions">
+          <div class="nav-links">
+            <a href="#products">المنتجات</a>
+            <a href="#tips">نصائح الشراء</a>
+            <a href="#contact">تواصل</a>
+          </div>
+          <button id="cartButton" class="icon-btn">
+            <span class="icon-cart" aria-hidden="true"></span>
+            <span class="cart-label">سلة التسوق</span>
+            <span id="cartCount" class="cart-count">0</span>
+          </button>
+        </div>
+      </nav>
+      <section id="welcome">
+        <h1>متجر النخبة للإلكترونيات</h1>
+        <p>أجهزة كمبيوتر، شاشات، وإكسسوارات بتصميم عصري وأسعار منافسة.</p>
+        <button id="tipButton" class="primary-btn">اعرض نصيحة شراء</button>
+        <p id="tipOutput" class="tip-output">اضغط الزر للحصول على نصيحة ذكية قبل الشراء.</p>
+      </section>
+    </header>
+
+    <main>
+      <section id="products" class="section">
+        <div class="section-heading">
+          <h2>أبرز الأجهزة</h2>
+          <p>اختر جهازك ولاحظ تبديل السعر بين بدون ضريبة ومع ضريبة 15٪.</p>
+          <div class="toggle-wrapper">
+            <span>بدون ضريبة</span>
+            <label class="switch">
+              <input type="checkbox" id="unitToggle" />
+              <span class="slider"></span>
+            </label>
+            <span>مع الضريبة</span>
+          </div>
+        </div>
+
+        <div class="recipes-grid">
+          <article
+            class="card"
+            data-name="كمبيوتر مكتبي للألعاب"
+            data-price-base="٣٬٥٠٠ ر.س"
+            data-price-tax="٤٬٠٢٥ ر.س"
+            data-price-base-value="3500"
+            data-price-tax-value="4025"
+          >
+            <img
+              src="https://images.pexels.com/photos/18105/pexels-photo.jpg"
+              alt="كمبيوتر مكتبي للألعاب"
+              class="product-image"
+            />
+            <h3>كمبيوتر مكتبي للألعاب</h3>
+            <ul>
+              <li>معالج Ryzen 7</li>
+              <li>كرت شاشة RTX 4070</li>
+              <li class="price">٣٬٥٠٠ ر.س بدون ضريبة</li>
+            </ul>
+            <p>أداء قوي وتجربة لعب سلسة بدقة عالية مع تصميم بإضاءة RGB.</p>
+            <button class="primary-btn add-to-cart">أضف للسلة</button>
+          </article>
+
+          <article
+            class="card"
+            data-name="لابتوب نحيف للأعمال"
+            data-price-base="٢٬٨٠٠ ر.س"
+            data-price-tax="٣٬٢٢٠ ر.س"
+            data-price-base-value="2800"
+            data-price-tax-value="3220"
+          >
+            <img
+              src="https://images.pexels.com/photos/18104/pexels-photo.jpg"
+              alt="لابتوب نحيف للأعمال"
+              class="product-image"
+            />
+            <h3>لابتوب نحيف للأعمال</h3>
+            <ul>
+              <li>معالج Intel i7</li>
+              <li>ذاكرة 16GB و SSD 512GB</li>
+              <li class="price">٢٬٨٠٠ ر.س بدون ضريبة</li>
+            </ul>
+            <p>مثالي للطلاب وروّاد الأعمال مع بطارية تدوم لوقت طويل.</p>
+            <button class="primary-btn add-to-cart">أضف للسلة</button>
+          </article>
+
+          <article
+            class="card"
+            data-name="شاشة 27 بوصة 2K"
+            data-price-base="٩٩٩ ر.س"
+            data-price-tax="١٬١٤٩ ر.س"
+            data-price-base-value="999"
+            data-price-tax-value="1149"
+          >
+            <img
+              src="https://images.pexels.com/photos/682933/pexels-photo-682933.jpeg"
+              alt="شاشة 27 بوصة"
+              class="product-image"
+            />
+            <h3>شاشة 27 بوصة 2K</h3>
+            <ul>
+              <li>معدل تحديث 144Hz</li>
+              <li>لوحة IPS بألوان غنية</li>
+              <li class="price">٩٩٩ ر.س بدون ضريبة</li>
+            </ul>
+            <p>مثالية للألعاب والعمل والتصميم بجودة صورة واضحة.</p>
+            <button class="primary-btn add-to-cart">أضف للسلة</button>
+          </article>
+
+          <article
+            class="card"
+            data-name="سماعات رأس لاسلكية"
+            data-price-base="٦٩٩ ر.س"
+            data-price-tax="٨٠٤ ر.س"
+            data-price-base-value="699"
+            data-price-tax-value="804"
+          >
+            <img
+              src="https://images.pexels.com/photos/3394659/pexels-photo-3394659.jpeg"
+              alt="سماعات رأس لاسلكية"
+              class="product-image"
+            />
+            <h3>سماعات رأس لاسلكية</h3>
+            <ul>
+              <li>إلغاء ضجيج نشط</li>
+              <li>عمر بطارية 30 ساعة</li>
+              <li class="price">٦٩٩ ر.س بدون ضريبة</li>
+            </ul>
+            <p>تجربة صوت غامرة مع راحة تامة في الاستماع الطويل.</p>
+            <button class="primary-btn add-to-cart">أضف للسلة</button>
+          </article>
+
+          <article
+            class="card"
+            data-name="لوحة مفاتيح ميكانيكية RGB"
+            data-price-base="٤٥٠ ر.س"
+            data-price-tax="٥١٨ ر.س"
+            data-price-base-value="450"
+            data-price-tax-value="518"
+          >
+            <img
+              src="https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg"
+              alt="لوحة مفاتيح ميكانيكية"
+              class="product-image"
+            />
+            <h3>لوحة مفاتيح ميكانيكية RGB</h3>
+            <ul>
+              <li>مفاتيح سريعة الاستجابة</li>
+              <li>إضاءة قابلة للتخصيص</li>
+              <li class="price">٤٥٠ ر.س بدون ضريبة</li>
+            </ul>
+            <p>مثالية للاعبين والمبرمجين مع جودة بناء عالية.</p>
+            <button class="primary-btn add-to-cart">أضف للسلة</button>
+          </article>
+
+          <article
+            class="card"
+            data-name="فأرة ألعاب دقيقة"
+            data-price-base="٣٢٠ ر.س"
+            data-price-tax="٣٦٨ ر.س"
+            data-price-base-value="320"
+            data-price-tax-value="368"
+          >
+            <img
+              src="https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg"
+              alt="فأرة ألعاب"
+              class="product-image"
+            />
+            <h3>فأرة ألعاب دقيقة</h3>
+            <ul>
+              <li>حساس 26K DPI</li>
+              <li>أزرار قابلة للبرمجة</li>
+              <li class="price">٣٢٠ ر.س بدون ضريبة</li>
+            </ul>
+            <p>تحكم سريع وخفيف بوزن مثالي للجلسات الطويلة.</p>
+            <button class="primary-btn add-to-cart">أضف للسلة</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="tips" class="section tips-section">
+        <h2>نصائح الشراء الذكي</h2>
+        <div class="showcase-card">
+          <div class="chip"></div>
+          <div class="card-content">
+            <p class="card-label">بطاقة النخبة الائتمانية</p>
+            <p class="card-number">5399  ****  ****  8821</p>
+            <div class="card-footer">
+              <span>صالح حتى 06/28</span>
+              <strong>Elite Pay</strong>
+            </div>
+          </div>
+        </div>
+        <div class="tips-grid">
+          <div>
+            <h4>اعرف استخدامك</h4>
+            <p>حدّد هل تحتاج الجهاز للألعاب، للدراسة، أو للتصميم قبل الشراء.</p>
+          </div>
+          <div>
+            <h4>لا تبالغ في المواصفات</h4>
+            <p>اختر مواصفات تغطي احتياجك الفعلي بدل دفع مبلغ إضافي على مميزات لن تستخدمها.</p>
+          </div>
+          <div>
+            <h4>الضمان مهم</h4>
+            <p>تأكد من وجود ضمان وصيانة معتمدة لحماية استثمارك.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <h3>تواصل معنا</h3>
+      <p>للاستفسار عن الأجهزة أو العروض الخاصة: student@example.com</p>
+    </footer>
+
+    <div id="overlay" class="overlay" aria-hidden="true"></div>
+    <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+      <div class="cart-header">
+        <h3>سلة التسوق</h3>
+        <button id="closeCart" class="icon-btn small" aria-label="إغلاق السلة">
+          ×
+        </button>
+      </div>
+      <div id="cartItems" class="cart-items">
+        <p class="empty-cart">السلة فارغة، أضف منتجاتك المفضلة.</p>
+      </div>
+      <div class="cart-summary">
+        <div class="cart-total">
+          <span>الإجمالي</span>
+          <strong id="cartTotal">٠ ر.س</strong>
+        </div>
+        <form class="checkout-form">
+          <p class="form-note">خانات تعبئة البطاقة للعرض فقط.</p>
+          <label>اسم حامل البطاقة</label>
+          <input type="text" placeholder="مثال: محمد علي" disabled />
+          <label>رقم البطاقة</label>
+          <input type="text" placeholder="XXXX XXXX XXXX XXXX" disabled />
+          <div class="form-row">
+            <span>
+              <label>تاريخ الانتهاء</label>
+              <input type="text" placeholder="MM/YY" disabled />
+            </span>
+            <span>
+              <label>رمز CVV</label>
+              <input type="text" placeholder="***" disabled />
+            </span>
+          </div>
+          <button class="primary-btn" type="button" disabled>إتمام الشراء</button>
+        </form>
+      </div>
+    </aside>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
