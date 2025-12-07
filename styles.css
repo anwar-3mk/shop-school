@@ -329,11 +329,11 @@ footer .primary-btn {
 .overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.55);
+  background-color: rgba(0, 0, 0, 0.65);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  z-index: 90;
+  z-index: 105;
 }
 
 .cart-drawer {
@@ -443,25 +443,40 @@ footer .primary-btn {
 
 .student-modal {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
-  width: min(90%, 500px);
-  background: linear-gradient(135deg, #0f172a, #1f2937);
-  border-radius: 20px;
-  padding: 0;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease;
   z-index: 110;
 }
 
 .student-modal.open {
   opacity: 1;
   pointer-events: auto;
-  transform: translate(-50%, -50%) scale(1);
+}
+
+.student-modal .modal-content {
+  position: relative;
+  width: min(90%, 500px);
+  max-height: 90vh;
+  background: linear-gradient(135deg, #0f172a, #1f2937);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.student-modal.open .modal-content {
+  transform: scale(1);
 }
 
 .modal-content {
