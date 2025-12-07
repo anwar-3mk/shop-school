@@ -313,14 +313,17 @@ main {
 
 footer {
   text-align: center;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
   background-color: #020617;
   color: #9ca3af;
   border-top: 1px solid #111827;
 }
 
 footer .primary-btn {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  display: inline-block;
+  font-size: 1.1rem;
+  padding: 0.9rem 2rem;
 }
 
 .overlay {
