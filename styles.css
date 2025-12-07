@@ -319,6 +319,10 @@ footer {
   border-top: 1px solid #111827;
 }
 
+footer .primary-btn {
+  margin-top: 1rem;
+}
+
 .overlay {
   position: fixed;
   inset: 0;
@@ -432,6 +436,76 @@ footer {
 .empty-cart {
   text-align: center;
   color: #94a3b8;
+}
+
+.student-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: min(90%, 500px);
+  background: linear-gradient(135deg, #0f172a, #1f2937);
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 110;
+}
+
+.student-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-content {
+  padding: 2rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #e5e7eb;
+  font-size: 1.5rem;
+}
+
+.student-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.info-label {
+  font-weight: 600;
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+.info-value {
+  font-weight: 700;
+  color: #e0e7ff;
+  font-size: 1.1rem;
 }
 
 @media (max-width: 600px) {
