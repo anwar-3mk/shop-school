@@ -112,7 +112,10 @@ addToCartButtons.forEach((button) => {
 
 cartButton.addEventListener("click", openCart);
 closeCartButton.addEventListener("click", closeCart);
-overlay.addEventListener("click", closeCart);
+overlay.addEventListener("click", () => {
+  closeCart();
+  closeStudentInfo();
+});
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeCart();
