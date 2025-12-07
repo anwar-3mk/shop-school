@@ -220,9 +220,28 @@
     <footer id="contact">
       <h3>تواصل معنا</h3>
       <p>للاستفسار عن الأجهزة أو العروض الخاصة: student@example.com</p>
+      <button id="studentInfoButton" class="primary-btn">معلومات الطالب المنشئ</button>
     </footer>
 
     <div id="overlay" class="overlay" aria-hidden="true"></div>
+    <div id="studentInfoModal" class="student-modal" aria-hidden="true">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>معلومات الطالب المنشئ</h3>
+          <button id="closeStudentInfo" class="icon-btn small" aria-label="إغلاق">×</button>
+        </div>
+        <div class="student-info">
+          <div class="info-item">
+            <span class="info-label">الطالب:</span>
+            <span class="info-value">ماجد صالح العنزي</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">الصف:</span>
+            <span class="info-value">اول ثانوي / اول</span>
+          </div>
+        </div>
+      </div>
+    </div>
     <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
       <div class="cart-header">
         <h3>سلة التسوق</h3>
