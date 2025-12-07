@@ -18,6 +18,9 @@ const cartItemsContainer = document.getElementById("cartItems");
 const cartCount = document.getElementById("cartCount");
 const cartTotal = document.getElementById("cartTotal");
 const addToCartButtons = document.querySelectorAll(".add-to-cart");
+const studentInfoButton = document.getElementById("studentInfoButton");
+const studentInfoModal = document.getElementById("studentInfoModal");
+const closeStudentInfoButton = document.getElementById("closeStudentInfo");
 
 const cartItems = [];
 
@@ -116,6 +119,22 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+function openStudentInfo() {
+  studentInfoModal.classList.add("open");
+  studentInfoModal.setAttribute("aria-hidden", "false");
+  overlay.classList.add("visible");
+  overlay.setAttribute("aria-hidden", "false");
+}
+
+function closeStudentInfo() {
+  studentInfoModal.classList.remove("open");
+  studentInfoModal.setAttribute("aria-hidden", "true");
+  overlay.classList.remove("visible");
+  overlay.setAttribute("aria-hidden", "true");
+}
+
 unitToggle.addEventListener("change", updatePrices);
 tipButton.addEventListener("click", showRandomTip);
+studentInfoButton.addEventListener("click", openStudentInfo);
+closeStudentInfoButton.addEventListener("click", closeStudentInfo);
 
